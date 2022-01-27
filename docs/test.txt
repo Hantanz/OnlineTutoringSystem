@@ -1,2 +1,5 @@
 
 https://www.tutsmake.com/node-js-express-mysql-user-authentication-rest-api-example/
+
+Using JWT for authentication
+https://blog.logrocket.com/how-to-secure-a-rest-api-using-jwt-7efd83e71432/
