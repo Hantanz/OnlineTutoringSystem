@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %> 
+<body>
+    <%- include("partials/sidenav") %> 
+    <div class="body-section" id="main">
+        <%- include("partials/topbar") %> 
+           <!-- listing area -->
+        <div class="container">
+            <div class="section-title row justify-content-center h5 m-2 p-2">
+                Your subscriptions
+            </div>
+            <div class="d-flex justify-content-center align-content-center flex-wrap">
+                <!-- course should be a json object and courses should be an array of jsons -->
+                <% courses.forEach(course => { %> 
+                    <a href="/courses/<%= course["courseId"] %>">
+                        <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                            <div class="img d-flex align-items-center">
+                                <img src="<%= course["thumbnail"] %>" class="" alt="Thumbnail">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title h6"><%= course["title"] %></h5>
+                              <p class="card-text small"><%= course["description"] %></p>
+                            </div>
+                        </div>
+                    </a>
+                <% }) %>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card m-2 p-2 shadow-sm border-0 video" style="width: 18rem;">
+                    <div class="img d-flex align-items-center">
+                        <img src="img/logo.png" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h6">Card title</h5>
+                      <p class="card-text small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("logo-near-toggle").innerHTML = '';
+        document.getElementById("navbar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("toggleBtnBox").innerHTML = `
+                <div id="toggleNav" type="button" onclick="closeNav()">
+                    <i class='bx bx-menu-alt-left p-2 h3'></i>
+                </div>`;
+    }
+    function closeNav() {
+        document.getElementById("navbar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("toggleBtnBox").innerHTML = `
+                <div id="toggleNav" type="button" onclick="openNav()">
+                    <i class='bx bx-menu-alt-left p-2 h3'></i>
+                </div>`;
+        document.getElementById("logo-near-toggle").innerHTML = `
+                <div class="logo h3">
+                    <i class='bx bx-unite p-2' ></i> StudyHall 
+                </div>`;
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!-- top bar for search and other meta data -->
+<div class="topbar p-2">
+    <div class="d-flex">
+        <div id="toggleBtnBox">
+            <div id="toggleNav" type="button" onclick="closeNav()">
+                <i class='bx bx-menu-alt-left p-2 h3'></i>
+            </div>
+        </div>
+        <div id="logo-near-toggle"></div>
+
+        <div id="search-section" class="ms-auto align-self-stretch w-50">
+            <form action="/search" name="searchForm" method="post">
+                <div class="input-group align-middle">
+                    <input name="query" type="text" class="form-control" placeholder="Search keywords of the course you need" aria-describedby="button-addon2">
+                    <button type="submit" class="btn" type="button" id="button-addon2"><i class='bx bx-search' ></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
